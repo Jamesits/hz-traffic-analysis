@@ -14,7 +14,7 @@ except (IOError, ValueError):
 	print("Status file not found.", file=sys.stderr)
 
 speed_array = requests.get(url).json()
-last_update_time = int(dateutil.parser.parse(speed_array[0]["record_date"]).timestamp()) * 1000000000
+last_update_time = int(dateutil.parser.parse(speed_array[0]["record_date"]).timestamp()) * 1000000000 # InfluxDB requires timestamp in ns
 if last_update_time <= last_crawl_time: sys.exit()
 for point in speed_array:
 	print("{},road_name={},road_class={} speed={} {}".format(
