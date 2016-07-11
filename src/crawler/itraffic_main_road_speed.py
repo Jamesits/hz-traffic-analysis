@@ -6,7 +6,7 @@
 import requests, dateutil.parser, os, sys
 
 url = "http://115.238.43.206:8300/main_road_speed/main_road_speed_for_date.json?level=3"
-dataset = "speed"
+dataset = "main_road_speed"
 persist_status_file = "/tmp/itraffic_crawler_status.tmp"
 
 last_crawl_time = 0
