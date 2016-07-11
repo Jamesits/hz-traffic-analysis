@@ -8,9 +8,16 @@ wget https://dl.influxdata.com/influxdb/releases/influxdb-0.13.0.x86_64.rpm && y
 cd /usr/local/src
 git clone git@github.com:Jamesits/hz-traffic-analysis.git
 
-# Add InfluxDB user: make sure you have admin set
-influx -database=telegraf -execute "CREATE USER telegraf WITH PASSWORD '8ufnGvYkc8bvqH'; GRANT READ ON telegraf TO telegraf;"
-
-# Installation
+# COnfiguration: assume /dev/sdb mounted on /data
+systemctl stop telegraf
+systemctl stop influxdb
+rm -r /var/lib/influxdb
+mkdir -p /data/influxdb
+ln -s /var/lib/influxdb /data/influxdb
 rm /etc/telegraf/telegraf.conf
 ln -s /usr/local/src/hz-traffic/hz-traffic-analysis/src/config/influx/telegraf.conf /etc/telegraf/telegraf.conf
+systemctl start influxdb
+systemctl start telegraf
+
+# Add InfluxDB user: make sure you have admin set
+influx -database=telegraf -execute "CREATE USER telegraf WITH PASSWORD '8ufnGvYkc8bvqH'; GRANT READ ON telegraf TO telegraf;"
