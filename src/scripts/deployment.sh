@@ -8,7 +8,10 @@ wget https://dl.influxdata.com/influxdb/releases/influxdb-0.13.0.x86_64.rpm && y
 cd /usr/local/src
 git clone git@github.com:Jamesits/hz-traffic-analysis.git
 
-# COnfiguration: assume /dev/sdb mounted on /data
+# Install Python 3 dependencies
+pip3 install -r hz-traffic-analysis/src/crawler/requirements.txt
+
+# Configuration: assume /dev/sdb mounted on /data
 systemctl stop telegraf
 systemctl stop influxdb
 rm -r /var/lib/influxdb
