@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# This converts iTraffic JSON format to InfluxDB Line Protocol.
+# This converts iLiveTraffice 2.0 JSON format to InfluxDB Line Protocol.
 # Input example see `sample_data/main_road_speed_for_date.json`
 # It updates every 5 min with a 5-10 min delay.
 # Output format see https://docs.influxdata.com/influxdb/v0.13/write_protocols/line/
