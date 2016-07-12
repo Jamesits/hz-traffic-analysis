@@ -1,0 +1,46 @@
+[
+  {
+    "created_at": "2016-07-12T13:15:11+08:00",
+    "display_order": 0,
+    "id": 2555278,
+    "index_name": "交通拥堵指数",
+    "index_value": "2.2",
+    "index_value_2": null,
+    "memo": null,
+    "record_date": "2016-07-12T13:05:00+08:00",
+    "updated_at": "2016-07-12T13:15:11+08:00"
+  },
+  {
+    "created_at": "2016-07-12T13:15:11+08:00",
+    "display_order": 1,
+    "id": 2555279,
+    "index_name": "地面主次干道平均速度",
+    "index_value": "25.2 km/h",
+    "index_value_2": null,
+    "memo": null,
+    "record_date": "2016-07-12T13:05:00+08:00",
+    "updated_at": "2016-07-12T13:15:11+08:00"
+  },
+  {
+    "created_at": "2016-07-12T13:15:47+08:00",
+    "display_order": 2,
+    "id": 2555281,
+    "index_name": "中河上塘高架平均速度",
+    "index_value": "47.5 km/h",
+    "index_value_2": null,
+    "memo": null,
+    "record_date": "2016-07-12T13:05:00+08:00",
+    "updated_at": "2016-07-12T13:15:47+08:00"
+  },
+  {
+    "created_at": "2016-07-12T13:15:11+08:00",
+    "display_order": 3,
+    "id": 2555280,
+    "index_name": "拥堵里程比例",
+    "index_value": "4.2 %",
+    "index_value_2": null,
+    "memo": null,
+    "record_date": "2016-07-12T13:05:00+08:00",
+    "updated_at": "2016-07-12T13:15:11+08:00"
+  }
+]
